@@ -1,7 +1,41 @@
 import React from 'react';
 
-function Applications() {
+function Applications({ modalHandler }) {
 
+    const applications = [
+        {
+            title: 'Star Books',
+            deployed: 'https://az84.github.io/Project-1/',
+            github: 'https://github.com/az84/Project-1',
+            image: './images/star-books-application.png',
+            tech: 'JavaScript, jQuery, Zurb CSS Framework, Google Books API, New York Times API, CSS, HTML',
+            description: 'Search for a topic and see book results'
+        },
+        {
+            title: 'Weather Dashboard',
+            deployed: 'https://jeffmullen.github.io/weather-dashboard/',
+            github: 'https://github.com/jeffMullen/weather-dashboard',
+            image: './images/weather-dashboard-application.png',
+            tech: 'JavaScript, jQuery, Open Weather API, Bootstrap CSS Framework, CSS, HTML',
+            description: 'Search for weather by city'
+        },
+        {
+            title: 'Day Planner',
+            deployed: 'https://jeffmullen.github.io/day-planner/',
+            github: 'https://github.com/jeffMullen/day-planner',
+            image: './images/day-planner.png',
+            tech: 'Moment.js, JavaScript, jQuery, Bootstrap CSS Framework, CSS, HTML',
+            description: 'Plan your day by saving events to app'
+        },
+        {
+            title: 'Placeholder',
+            deployed: '#',
+            github: '#',
+            image: './images/shifaaz-shamoon-oR0uERTVyD0-unsplash.jpg',
+            tech: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit',
+            description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus dignissimos'
+        }
+    ]
 
     return (
 
@@ -24,7 +58,7 @@ function Applications() {
                     {/* <!-- <a href="https://az84.github.io/Project-1/" target="_blank"></a> --> */}
                     <p>http://obscure-ocean-20287.herokuapp.com/</p>
                     <p>https://github.com/lapshaffer/SustainableReviewsProject</p>
-                    <img data-toggle="modal" data-target="#application-modal" src="./images/grove.png"
+                    <img onClick={modalHandler} data-toggle="modal" data-target="#application-modal" src="./images/grove.png"
                         alt="Connector to Star Books Application" />
                     <p>Handlebars, Chart.js, Bootstrap, Node, Express, JavaScript, CSS, express-session, jQuery, MySQL,
                         Sequelize, dotenv, bycrypt</p>
@@ -36,49 +70,17 @@ function Applications() {
                 {/* <!-- Smaller images of applications flexbox --> */}
 
                 <div className="app-wrapper">
-                    <div>
-                        <h3><span>Star Books</span></h3>
-                        {/* <!-- <a href="https://az84.github.io/Project-1/" target="_blank"></a> --> */}
-                        <p>https://az84.github.io/Project-1/</p>
-                        <p>https://github.com/az84/Project-1</p>
-                        <img data-toggle="modal" data-target="#application-modal"
-                            src="./images/star-books-application.png" alt="Connector to Star Books Application" />
-                        <p>JavaScript, jQuery, Zurb CSS Framework, Google Books API, New York Times API, CSS, HTML</p>
-                        <p>Search for a topic and see book results</p>
-                    </div>
-                    <div>
-                        <h3><span>Weather Dashboard</span></h3>
-                        {/* <!-- <a href="https://jeffmullen.github.io/weather-dashboard/" target="_blank"></a> --> */}
-                        <p>https://jeffmullen.github.io/weather-dashboard/</p>
-                        <p>https://github.com/jeffMullen/weather-dashboard</p>
-                        <img data-toggle="modal" data-target="#application-modal"
-                            src="./images/weather-dashboard-application.png"
-                            alt="Connector to Weather Dashboard application." />
-                        <p>JavaScript, jQuery, Open Weather API, Bootstrap CSS Framework, CSS, HTML</p>
-                        <p>Search for weather by city</p>
-
-                    </div>
-                    <div>
-                        <h3><span>Day Planner</span></h3>
-                        {/* <!-- <a href="https://jeffmullen.github.io/day-planner/" target="_blank"></a> --> */}
-                        <p>https://jeffmullen.github.io/day-planner/</p>
-                        <p>https://github.com/jeffMullen/day-planner</p>
-                        <img data-toggle="modal" data-target="#application-modal" src="./images/day-planner.png"
-                            alt="Connector to Day Planner application." />
-                        <p>Moment.js, JavaScript, jQuery, Bootstrap CSS Framework, CSS, HTML</p>
-                        <p>Plan your day by saving events to app</p>
-
-                    </div>
-                    <div>
-                        <h3><span>Placeholder 2</span></h3>
-                        <p>#</p>
-                        <p>#</p>
-                        <img data-toggle="modal" data-target="#application-modal"
-                            src="./images/shifaaz-shamoon-oR0uERTVyD0-unsplash.jpg" alt="Ocean waves." />
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus dignissimos</p>
-
-                    </div>
+                    {applications.map((project) => (
+                        <div>
+                            <h3><span>{project.title}</span></h3>
+                            <p>{project.deployed}</p>
+                            <p>{project.github}</p>
+                            <img onClick={modalHandler} data-toggle="modal" data-target="#application-modal"
+                                src={project.image} alt={`Link to ${project.title} information`} />
+                            <p>{project.tech}</p>
+                            <p>{project.description}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
             {/* <!-- Link Modal --> */}
@@ -100,7 +102,9 @@ function Applications() {
                     </div>
                 </div>
             </div>
+
         </section>
+
     );
 }
 
