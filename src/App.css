@@ -12,13 +12,15 @@
 
 html {
   scroll-behavior: smooth;
+  /* font-size: 1rem; */
 }
 
 body {
   background-color: var(--background);
   color: var(--text-color);
   padding: var(--element-padding);
-  margin: 0 20px;
+  margin: auto;
+  max-width: 1800px;
 }
 
 
