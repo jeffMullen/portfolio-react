@@ -1,16 +1,27 @@
-import './reset.css';
 import './App.css';
 import About from './components/About';
 import Applications from './components/Applications';
 
 function App() {
 
-  function modalHandler(imageLink) {
-    const modalBody = document.querySelector('.modal-body')
-    const modalTitle = document.querySelector('.modal-title')
-    modalTitle.innerHTML = 'Hello';
-    modalBody.innerHTML = 'COOOL';
-    console.log(this);
+  function modalHandler(title, deployed, github, tech, description) {
+    let modalTitle = document.querySelector('.modal-title')
+    let liveApp = document.querySelector('#liveApp');
+    let gitHubRepo = document.querySelector('#gitHubRepo');
+    let techUsed = document.querySelector('#techUsed')
+    let projectDescription = document.querySelector('#projectDescription')
+
+    liveApp.setAttribute('href', deployed);
+    gitHubRepo.setAttribute('href', github);
+    modalTitle.innerHTML = title;
+    techUsed.innerHTML = tech;
+    projectDescription.innerHTML = description;
+
+    console.log(title)
+    console.log(deployed)
+    console.log(github)
+    console.log(tech)
+    console.log(description)
   }
 
   return (

@@ -2,8 +2,19 @@ import React from 'react';
 
 function Applications({ modalHandler }) {
 
+    const premier = {
+        id: 1,
+        title: 'Grove',
+        deployed: 'http://obscure-ocean-20287.herokuapp.com/',
+        github: 'https://github.com/lapshaffer/SustainableReviewsProject',
+        image: './images/grove.png',
+        tech: 'Handlebars, Chart.js, Bootstrap, Node, Express, JavaScript, CSS, express-session, jQuery, MySQL, Sequelize, dotenv, bycrypt',
+        description: "A consumer lead review website to convey first-hand experience of a company's sustainability practices"
+    }
+
     const applications = [
         {
+            id: 2,
             title: 'Star Books',
             deployed: 'https://az84.github.io/Project-1/',
             github: 'https://github.com/az84/Project-1',
@@ -12,6 +23,7 @@ function Applications({ modalHandler }) {
             description: 'Search for a topic and see book results'
         },
         {
+            id: 3,
             title: 'Weather Dashboard',
             deployed: 'https://jeffmullen.github.io/weather-dashboard/',
             github: 'https://github.com/jeffMullen/weather-dashboard',
@@ -20,6 +32,7 @@ function Applications({ modalHandler }) {
             description: 'Search for weather by city'
         },
         {
+            id: 4,
             title: 'Day Planner',
             deployed: 'https://jeffmullen.github.io/day-planner/',
             github: 'https://github.com/jeffMullen/day-planner',
@@ -28,6 +41,7 @@ function Applications({ modalHandler }) {
             description: 'Plan your day by saving events to app'
         },
         {
+            id: 5,
             title: 'Placeholder',
             deployed: '#',
             github: '#',
@@ -53,29 +67,25 @@ function Applications({ modalHandler }) {
 
                 {/* <!-- Largest image in flexbox --> */}
 
-                <div id="premier">
-                    <h3><span>Grove</span></h3>
-                    {/* <!-- <a href="https://az84.github.io/Project-1/" target="_blank"></a> --> */}
-                    <p>http://obscure-ocean-20287.herokuapp.com/</p>
-                    <p>https://github.com/lapshaffer/SustainableReviewsProject</p>
-                    <img onClick={modalHandler} data-toggle="modal" data-target="#application-modal" src="./images/grove.png"
-                        alt="Connector to Star Books Application" />
-                    <p>Handlebars, Chart.js, Bootstrap, Node, Express, JavaScript, CSS, express-session, jQuery, MySQL,
-                        Sequelize, dotenv, bycrypt</p>
-                    <p>A consumer lead review website to convey first-hand experience of a company's sustainability
-                        practices</p>
-
+                <div id="premier" key={premier.id}>
+                    <h3><span>{premier.title}</span></h3>
+                    <p>{premier.deployed}</p>
+                    <p>{premier.github}</p>
+                    <img onClick={() => modalHandler(premier.title, premier.deployed, premier.github, premier.tech, premier.description)} data-toggle="modal" data-target="#application-modal" src="./images/grove.png"
+                        alt={`Link to ${premier.title} information`} />
+                    <p>{premier.tech}</p>
+                    <p>{premier.description}</p>
                 </div>
 
                 {/* <!-- Smaller images of applications flexbox --> */}
 
                 <div className="app-wrapper">
                     {applications.map((project) => (
-                        <div>
+                        <div key={project.id}>
                             <h3><span>{project.title}</span></h3>
                             <p>{project.deployed}</p>
                             <p>{project.github}</p>
-                            <img onClick={modalHandler} data-toggle="modal" data-target="#application-modal"
+                            <img onClick={() => modalHandler(project.title, project.deployed, project.github, project.tech, project.description)} data-toggle="modal" data-target="#application-modal"
                                 src={project.image} alt={`Link to ${project.title} information`} />
                             <p>{project.tech}</p>
                             <p>{project.description}</p>
@@ -94,10 +104,12 @@ function Applications({ modalHandler }) {
                             </button>
                         </div>
                         <div className="modal-body row">
-                            {/* <!-- <p>Modal body text goes here.</p> --> */}
+                            <a id="liveApp" href="placeholder" className="col-6" target="_blank">Live Application</a>
+                            <a id="gitHubRepo" href="placeholder" className="col-6" target="_blank">GitHub Repository</a>
                         </div>
                         <div className="modal-footer row">
-
+                            <p id="techUsed" className="col-12"></p>
+                            <p id="projectDescription" className="col-12"></p>
                         </div>
                     </div>
                 </div>
