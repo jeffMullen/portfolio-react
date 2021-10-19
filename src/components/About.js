@@ -15,7 +15,7 @@ function About() {
 
             <div className="about-content">
                 <div>
-                    <img src="./images/self-portrait1.jpg" alt="Self-Portrait"></img>
+                    <img src="./images/self-portrait1.jpg" alt="Self-Portrait" />
                 </div>
                 <div className="about-paragraphs">
                     <p>Hi. My name is Jeff. I am a developer who strives for truly presentable applications. There is a
