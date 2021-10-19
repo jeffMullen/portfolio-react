@@ -1,0 +1,462 @@
+:root {
+  --background: #0d1b2a;
+  --text-color: #C4C5BE;
+  --strong-color: #16DB93;
+  --link-glow-color: #20E99F;
+  --heading-font: 'Rubik', sans-serif;
+  --content-font: 'Montserrat', sans-serif;
+  --element-padding: 20px;
+}
+
+/* || General styles ----------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+  padding: var(--element-padding);
+  margin: 0 20px;
+}
+
+
+/* || Header styles ----------------------- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--element-padding);
+  font-size: 45px;
+}
+
+h1 {
+  
+  color: var(--strong-color);
+  font-family: var(--heading-font);
+}
+
+li {
+  display: inline;
+  font-size: .45em;
+  padding: 2px;
+  margin: var(--element-padding);
+  font-family: var(--heading-font);
+}
+
+a {
+  text-decoration: none;
+  color: var(--strong-color);
+  transition: .2s;
+}
+
+header a:hover, .modal-content a:hover {
+  color: var(--link-glow-color);
+  text-shadow: 
+  /* 0 0 5px var(--strong-color); */
+               0 0 10px var(--strong-color);
+  text-decoration: none;
+}
+
+/* || Main section styles ----------------------- */
+
+main {
+  line-height: 1.3;
+  margin: 100px 0 50px 0;
+}
+
+img {
+  margin: 20px 10px;
+  border: 2px solid #606156;
+  height: 352px;
+  padding: 10px;
+}
+
+
+h2 {
+  font-size: 25px;
+  font-family: var(--heading-font);
+  color: var(--strong-color);
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+div {
+  padding: var(--element-padding);
+}
+
+p {
+  font-family: var(--content-font);
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: .5px;
+}
+/* || Overall About, Skills, Applications, and Contact Section Styles ----------------------- */
+
+.about, 
+.skills,
+.applications, 
+.contact {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 50px auto;
+}
+
+.section-heading h2 {
+  width: 163px;
+}
+
+/* || About Content flexbox ----------------------- */
+
+.about-content {
+  width: 70%;
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+
+/* || About Paragraph section flexbox ----------------------- */
+
+.about-content div:first-child {
+  height: 385px;
+  align-self: center;
+}
+
+.about-paragraphs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.about p {
+  padding: var(--element-padding);
+}
+
+/* || Dividing bar between all headings and content ----------------------- */
+
+.divider {
+  padding: 0;
+  width: 7px;
+  border: 2px solid var(--strong-color);
+}
+
+h3 {
+  font-family: var(--heading-font);
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+/* || Skills Content ----------------------- */
+
+.skills-content {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skills-content p {
+  font-size: 18px;
+  width: 30%;
+}
+
+
+/* || Applications Content ----------------------- */
+
+.applications-content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.applications-content span, h5 {
+  background-color: var(--strong-color);
+  color: var(--background);
+  padding: 3px 10px;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+h5 {
+  padding: 5px 10px;
+}
+
+.applications-content img:hover {
+  cursor: pointer;
+}
+
+.applications-content p {
+  display: none;
+}
+/* || Largest Application section ----------------------- */
+
+#premier {
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+
+#premier img {
+  width: 97.5%;
+  margin: 0;
+  object-fit: cover;
+}
+
+/* || Small Application section ----------------------- */
+
+.app-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.app-wrapper div {
+  padding: 10px 0;
+  margin: 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.app-wrapper a {
+  width: 95%;
+}
+  
+.app-wrapper img {
+  width: 95%;
+  height: 150px;
+  margin: 0;
+  object-fit: cover;
+}
+
+/* || Modal Stylings ----------------------- */
+.modal-content {
+  background-color: #0f2a47;
+  border: 3px solid var(--strong-color);
+}
+
+.modal-header h5{
+  margin-bottom: 10px;
+}
+
+.modal-content button {
+  color: var(--link-glow-color);
+}
+
+.modal-footer {
+  color: white;
+}
+
+.modal-footer p {
+  letter-spacing: 1px;
+}
+
+.modal-footer p:first-child {
+  margin-bottom: 15px;
+}
+
+.modal a {
+  display: block;
+  font-weight: bold;
+}
+
+/* || Contact-Content flexbox ----------------------- */
+
+.contact-content {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.contact-content a {
+  font-size: 16px;
+  font-family: var(--content-font);
+  padding: 15px 20px;
+}
+
+.contact-content a:hover {
+  color: var(--link-glow-color);
+  text-shadow: 0 0 8px var(--strong-color);
+               /* 0 0 10px var(--strong-color); */
+  text-decoration: none;
+}
+
+/* || Self Portait image moves to top of section ----------------------- */
+
+@media screen and (max-width: 1390px) {
+  body {
+      margin: 0 10px;
+      padding: 20px 0;
+  }
+
+  .about-content {
+      flex-direction: column;
+  }
+}
+
+/* || Small Application images wrap to 1 per row ----------------------- */
+
+@media screen and (max-width: 1135px) {
+  h2 {
+      text-align: end;
+  }
+
+  .skills-content p {
+      text-align: center;
+  }
+  
+  #premier img {
+      width: 100%;
+  }
+
+  .app-wrapper {
+      width: 100%;
+  }
+
+  .app-wrapper div {
+      width: 100%;
+  }
+
+  .app-wrapper img {
+      width: 100%;
+  }
+}
+
+/* || Entire app moves to column layout ----------------------- */
+
+@media screen and (max-width: 935px) {
+  .about, .skills, .applications, .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin: 50px auto;
+  }
+
+  h2 {
+      text-align: center;
+  }    
+
+
+  .divider {
+      width: 100%;
+      height: 7px;
+      margin-top: 20px;
+  }
+
+  .skills-content {
+      margin-top: 50px;
+      width: 80%;
+  }
+
+  .contact-content {
+      width: 90%;
+  }
+}
+
+/* || Nav bar set to display as a column ----------------------- */
+
+@media screen and (max-width: 800px) {
+  main {
+      margin-top: 50px;
+  }
+
+  li {
+      display: block;
+  }
+}
+
+/* || Content takes up more width ----------------------- */
+
+@media screen and (max-width: 743px) {
+  .contact {
+      justify-content: space-evenly;
+  }
+
+  .about-content, .applications-content {
+      width: 90%;
+  }
+
+  .skills-content {
+      justify-content: space-evenly;
+  }
+
+  .skills-content p {
+      margin-bottom: 25px;
+      width: 40%;
+  }
+
+  .contact a {
+      width: 220px;
+  }
+  
+  .contact-content {
+      flex-wrap: wrap;
+  }
+}
+
+/* || Header flex-direction as columnm ----------------------- */
+
+@media screen and (max-width: 575px) {
+  header {
+      flex-direction: column;
+  }
+
+  nav {
+      padding-top: 20px;
+  }
+
+  nav ul {
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  nav ul li {
+      margin: 5px 0;
+  }
+
+  .about, .application, .contact {
+      width: 100%;
+  }
+
+  .about-content {
+      width: 100%;
+  }
+
+  .about-paragraphs {
+      margin-top: 40px;
+      /* width: 100%; */
+      padding: 0;
+  }
+
+  .skills-content {
+      width: 100%;
+  }
+  
+  .about .divider, .contact .divider {
+      width: 90%;
+  }
+}
+
+/* || Centering self-portrait image ----------------------- */
+
+@media screen and (max-width: 350px) {
+  .about-content div:first-child {
+      width: 90%;
+      align-self: center;
+  }
+
+  .about img {
+      width: inherit;
+  }
+}
