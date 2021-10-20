@@ -98,7 +98,7 @@ function Applications({ modalHandler }) {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title"></h5>
+                            <h5 className="modal-title">Modal Placeholder</h5>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -108,8 +108,8 @@ function Applications({ modalHandler }) {
                             <a id="gitHubRepo" href="placeholder" className="col-6" target="_blank">GitHub Repository</a>
                         </div>
                         <div className="modal-footer row">
-                            <p id="techUsed" className="col-12"></p>
                             <p id="projectDescription" className="col-12"></p>
+                            <p id="techUsed" className="col-12"></p>
                         </div>
                     </div>
                 </div>

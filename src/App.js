@@ -1,4 +1,5 @@
 import './App.css';
+import Header from './components/Header';
 import About from './components/About';
 import Applications from './components/Applications';
 
@@ -16,19 +17,16 @@ function App() {
     modalTitle.innerHTML = title;
     techUsed.innerHTML = tech;
     projectDescription.innerHTML = description;
-
-    console.log(title)
-    console.log(deployed)
-    console.log(github)
-    console.log(tech)
-    console.log(description)
   }
 
   return (
-    <main>
-      <About />
-      <Applications modalHandler={modalHandler} />
-    </main>
+    <div id="reactApp">
+      <Header />
+      <main>
+        <About />
+        <Applications modalHandler={modalHandler} />
+      </main>
+    </div>
   );
 }
 
