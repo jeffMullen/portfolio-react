@@ -20,12 +20,12 @@ body {
   background-color: var(--background);
   color: var(--text-color);
   padding: var(--element-padding);
-  margin: auto;
-  max-width: 1800px;
 }
 
 #root {
   padding: 0;
+  max-width: 1800px;
+  margin: auto;
 }
 
 #reactApp {
@@ -66,16 +66,12 @@ a {
 }
 
 header a:hover,
-.modal-content a:hover {
+.modal-content a:hover,
+.active {
   color: var(--link-glow-color);
   text-shadow: 
   0 0 10px var(--strong-color);
   text-decoration: none;
-}
-
-.active {
-  color: var(--link-glow-color);
-  text-shadow: 0 0 5px #16db93ad;
 }
 
 /* || Main section styles ----------------------- */
@@ -111,16 +107,32 @@ p {
   line-height: 1.5;
   letter-spacing: .5px;
 }
-/* || Overall About, Skills, Applications, and Contact Section Styles ----------------------- */
+/* || Overall About, Skills, Applications, and Footer Section Styles ----------------------- */
 
 .about, 
+.bio-wrapper,
 .skills,
 .applications, 
-.contact {
+footer {
   display: flex;
   justify-content: space-around;
   width: 90%;
   margin: 50px auto;
+}
+
+.about {
+  flex-direction: column;
+}
+
+.bio-wrapper,
+.skills {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.bio-wrapper {
+  margin-bottom: 100px;
 }
 
 .section-heading h2 {
@@ -129,7 +141,7 @@ p {
 
 /* || About Content flexbox ----------------------- */
 
-.about-content {
+.bio-content {
   width: 70%;
   display:flex;
   flex-direction: row-reverse;
@@ -138,12 +150,12 @@ p {
 
 /* || About Paragraph section flexbox ----------------------- */
 
-.about-content div:first-child {
+.bio-content div:first-child {
   height: 385px;
   align-self: center;
 }
 
-.about-paragraphs {
+.bio-paragraphs {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -286,22 +298,22 @@ h5 {
   font-weight: bold;
 }
 
-/* || Contact-Content flexbox ----------------------- */
+/* || footer-Content flexbox ----------------------- */
 
-.contact-content {
+.footer-content {
   width: 70%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
-.contact-content a {
+.footer-content a {
   font-size: 16px;
   font-family: var(--content-font);
   padding: 15px 20px;
 }
 
-.contact-content a:hover {
+.footer-content a:hover {
   color: var(--link-glow-color);
   text-shadow: 0 0 8px var(--strong-color);
                /* 0 0 10px var(--strong-color); */
@@ -316,7 +328,7 @@ h5 {
       padding: 20px 0;
   }
 
-  .about-content {
+  .bio-content {
       flex-direction: column;
   }
 }
@@ -352,7 +364,7 @@ h5 {
 /* || Entire app moves to column layout ----------------------- */
 
 @media screen and (max-width: 935px) {
-  .about, .skills, .applications, .contact {
+  .about, .skills, .applications, footer {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -376,7 +388,7 @@ h5 {
       width: 80%;
   }
 
-  .contact-content {
+  .footer-content {
       width: 90%;
   }
 }
@@ -396,11 +408,11 @@ h5 {
 /* || Content takes up more width ----------------------- */
 
 @media screen and (max-width: 743px) {
-  .contact {
+  footer {
       justify-content: space-evenly;
   }
 
-  .about-content, .applications-content {
+  .bio-content, .applications-content {
       width: 90%;
   }
 
@@ -413,11 +425,11 @@ h5 {
       width: 40%;
   }
 
-  .contact a {
+  .footer a {
       width: 220px;
   }
   
-  .contact-content {
+  .footer-content {
       flex-wrap: wrap;
   }
 }
@@ -444,15 +456,15 @@ h5 {
       margin: 5px 0;
   }
 
-  .about, .application, .contact {
+  .about, .application, footer {
       width: 100%;
   }
 
-  .about-content {
+  .bio-content {
       width: 100%;
   }
 
-  .about-paragraphs {
+  .bio-paragraphs {
       margin-top: 40px;
       /* width: 100%; */
       padding: 0;
@@ -462,7 +474,7 @@ h5 {
       width: 100%;
   }
   
-  .about .divider, .contact .divider {
+  .bio-wrapper .divider, footer .divider {
       width: 90%;
   }
 }
@@ -470,7 +482,7 @@ h5 {
 /* || Centering self-portrait image ----------------------- */
 
 @media screen and (max-width: 350px) {
-  .about-content div:first-child {
+  .bio-content div:first-child {
       width: 90%;
       align-self: center;
   }

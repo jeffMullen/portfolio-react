@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
 
-function About() {
-
+function Bio() {
     return (
-        <section className="about section-heading">
+        <div className="bio-wrapper section-heading">
             {/* <!-- About me section --> */}
             <h2>About Me</h2>
 
@@ -13,11 +12,11 @@ function About() {
 
             {/* <!-- About content flex container --> */}
 
-            <div className="about-content">
+            <div className="bio-content">
                 <div>
                     <img src="./images/self-portrait1.jpg" alt="Self-Portrait" />
                 </div>
-                <div className="about-paragraphs">
+                <div className="bio-paragraphs">
                     <p>Hi. My name is Jeff. I am a developer who strives for truly presentable applications. There is a
                         common thread throughout my life, which is that I have a methodology to the things I do. As a
                         Massage Therapist I was able to provide excellent work for my clients as a result of setting
@@ -36,8 +35,8 @@ function About() {
                         such as accesibility and ease of use, that need met.</p>
                 </div>
             </div>
-        </section>
-    );
+        </div>
+    )
 }
 
-export default About;
+export default Bio;

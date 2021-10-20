@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
-import About from './components/About';
-import Skills from './components/Skills';
-import Applications from './components/Applications/Applications';
+import About from './components/About/About';
+import Applications from './components/Portfolio/Applications';
 import Footer from './components/Footer';
 
 function App() {
@@ -14,9 +13,6 @@ function App() {
   const renderPage = () => {
     if (currentPage === 'About') {
       return <About />;
-    }
-    if (currentPage === 'Skills') {
-      return <Skills />;
     }
     if (currentPage === 'Applications') {
       return <Applications />;

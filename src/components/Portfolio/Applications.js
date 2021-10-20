@@ -1,11 +1,12 @@
 import React from 'react';
 import Premier from './Premier';
 import Secondary from './Secondary';
-import Modal from '../Modal';
+import Modal from './Modal';
 
 function Applications() {
 
     function modalHandler(title, deployed, github, tech, description) {
+
         let modalTitle = document.querySelector('.modal-title')
         let liveApp = document.querySelector('#liveApp');
         let gitHubRepo = document.querySelector('#gitHubRepo');
@@ -18,7 +19,6 @@ function Applications() {
         techUsed.innerHTML = tech;
         projectDescription.innerHTML = description;
     }
-
 
     return (
 

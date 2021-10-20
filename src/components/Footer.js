@@ -2,15 +2,15 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer className="contact section-heading">
-            {/* <!-- Contact me section --> */}
+        <footer className="section-heading">
+            {/* <!-- Footer me section --> */}
             <h2>Contact</h2>
 
             {/* <!-- Divider between heading and content --> */}
 
             <div className="divider"></div>
 
-            <div className="contact-content">
+            <div className="footer-content">
                 <a href="https://github.com/jeffMullen" rel="noreferrer" target="_blank">GitHub</a>
                 <a href="https://linkedin.com/in/jeff-mullen27" rel="noreferrer" target="_blank">LinkedIn</a>
                 <a href="tel:+1-267-603-3134">(267) 603-3134</a>

@@ -9,12 +9,9 @@ function Header({ currentPage, pageChange }) {
                     <li><a href="#about"
                         onClick={() => pageChange('About')}
                         className={currentPage === 'About' ? 'active' : ''}>About</a></li>
-                    <li><a href="#skills"
-                        onClick={() => pageChange('Skills')}
-                        className={currentPage === 'Skills' ? 'active' : ''}>Skills</a></li>
                     <li><a href="#applications"
                         onClick={() => pageChange('Applications')}
-                        className={currentPage === 'Applications' ? 'active' : ''}>Applications</a></li>
+                        className={currentPage === 'Applications' ? 'active' : ''}>Portfolio</a></li>
                     <li><a href="#contact"
                         onClick={() => pageChange('Contact')}
                         className={currentPage === 'Contact' ? 'active' : ''}>Contact</a></li>
