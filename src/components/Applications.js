@@ -94,7 +94,7 @@ function Applications({ modalHandler }) {
                 </div>
             </div>
             {/* <!-- Link Modal --> */}
-            <div className="modal fade" tabindex="-1" id="application-modal">
+            <div className="modal fade" tabIndex="-1" id="application-modal">
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">

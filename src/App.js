@@ -1,7 +1,9 @@
 import './App.css';
 import Header from './components/Header';
 import About from './components/About';
+import Skills from './components/Skills';
 import Applications from './components/Applications';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -24,8 +26,10 @@ function App() {
       <Header />
       <main>
         <About />
+        <Skills />
         <Applications modalHandler={modalHandler} />
       </main>
+      <Footer />
     </div>
   );
 }
