@@ -3,7 +3,7 @@ import React from 'react';
 function About() {
 
     return (
-        <section id="about" className="about section-heading">
+        <section className="about section-heading">
             {/* <!-- About me section --> */}
             <h2>About Me</h2>
 

@@ -22,7 +22,7 @@ function Applications() {
 
     return (
 
-        <section id="applications" className="applications section-heading">
+        <section className="applications section-heading">
             {/* <!-- Applications section --> */}
             <h2>Applications</h2>
 

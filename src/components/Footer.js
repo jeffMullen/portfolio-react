@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer id="contact" className="contact section-heading">
+        <footer className="contact section-heading">
             {/* <!-- Contact me section --> */}
             <h2>Contact</h2>
 
