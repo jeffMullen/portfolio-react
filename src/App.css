@@ -61,11 +61,10 @@ a {
   transition: .2s;
 }
 
-header a:hover, .modal-content a:hover {
+header a:hover, .modal-content a:hover, .active {
   color: var(--link-glow-color);
   text-shadow: 
-  /* 0 0 5px var(--strong-color); */
-               0 0 10px var(--strong-color);
+  0 0 10px var(--strong-color);
   text-decoration: none;
 }
 
