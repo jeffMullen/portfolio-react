@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './App.css';
+// import './App.css';
+import './index.css';
 import Header from './components/Header';
 import About from './components/About/About';
 import Applications from './components/Portfolio/Applications';
@@ -28,9 +29,9 @@ function App() {
     <div id="reactApp">
       <Header currentPage={currentPage} pageChange={pageChange} />
       <main>
-        {renderPage()}
+        {/* {renderPage()} */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
