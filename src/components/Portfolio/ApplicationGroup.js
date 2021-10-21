@@ -1,7 +1,17 @@
 import React from 'react';
+import Project from './Project';
 
-function Secondary({ modalHandler }) {
+function ApplicationGroup({ modalHandler }) {
     const applications = [
+        {
+            id: 1,
+            title: 'Grove',
+            deployed: 'http://obscure-ocean-20287.herokuapp.com/',
+            github: 'https://github.com/lapshaffer/SustainableReviewsProject',
+            image: './images/grove.png',
+            tech: 'Handlebars, Chart.js, Bootstrap, Node, Express, JavaScript, CSS, express-session, jQuery, MySQL, Sequelize, dotenv, bycrypt',
+            description: "A consumer lead review website to convey first-hand experience of a company's sustainability practices"
+        },
         {
             id: 2,
             title: 'Star Books',
@@ -41,20 +51,26 @@ function Secondary({ modalHandler }) {
     ]
 
     return (
-        <div className="app-wrapper">
-            {applications.map((project) => (
-                <div key={project.id}>
-                    <h3><span>{project.title}</span></h3>
-                    <p>{project.deployed}</p>
-                    <p>{project.github}</p>
-                    <img onClick={() => modalHandler(project.title, project.deployed, project.github, project.tech, project.description)} data-toggle="modal" data-target="#application-modal"
-                        src={project.image} alt={`Link to ${project.title} information`} />
-                    <p>{project.tech}</p>
-                    <p>{project.description}</p>
-                </div>
-            ))}
+
+        <div className="applications-content">
+
+            {/* <!-- Largest image in flexbox --> */}
+
+            <Project project={applications[0]} modalHandler={modalHandler} />
+
+            <div className="app-wrapper">
+                {applications.map((project, index) => {
+                    if (index > 0) {
+                        return <Project key={index} project={project} modalHandler={modalHandler} />
+                    };
+                    return null;
+                })}
+            </div>
+            {/* <!-- Smaller images of applications flexbox --> */}
+
         </div>
+
     )
 }
 
-export default Secondary;
+export default ApplicationGroup;
