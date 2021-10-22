@@ -1,0 +1,76 @@
+// Montserrat font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Rubik:wght@400;500;600;700&display=swap');
+
+// Override and Custom Variables
+// Font-families
+$heading-font: 'Montserrat', sans-serif;
+$content-font: 'Rubik', sans-serif;
+
+$dark-bg: #0A141F;
+$body-bg: #0d1b2a;
+$strong-color: #16DB93;
+$link-glow-color: #20E99F;
+$navbar-dark-brand-color: $strong-color;
+$navbar-dark-hover-color: $strong-color;
+$navbar-dark-active-color: $strong-color;
+// $navbar-dark-color: $strong-color;
+$container-max-widths: (
+    md: 100%,
+    // xxl: 1600px
+);
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+
+.navbar {
+    background: $body-bg;
+    box-shadow: 0 2px 2px $dark-bg;
+}
+
+.navbar .container {
+    padding: 0 15px;
+}
+
+.navbar-brand {
+    font-family: $heading-font;
+    &:hover {
+        color: $strong-color;
+    }
+}
+
+span.navbar-brand:hover {
+    color: $strong-color;
+    cursor: default;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus
+ {
+    color: $strong-color;
+}
+
+
+.navbar-toggler {
+    border: none;
+    // color: $strong-color;
+}
+
+.container .navbar-toggler {
+    outline: none;
+    box-shadow: none;
+}
+
+@media screen and (min-width: 1600px) {
+    .navbar-brand {
+        font-size: 2rem;
+    }
+
+    .navbar-nav {
+        font-size: 1.2rem;
+    }
+
+    .navbar .container {
+        padding: 0 25px;
+    }
+}

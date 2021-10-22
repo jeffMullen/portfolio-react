@@ -1,29 +1,25 @@
 import React from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
+
 
 function Header({ currentPage, pageChange }) {
     return (
-        <header>
-            <nav className="navbar navbar-expand-lg d-flex justify-content-between">
-                <h1 className="navbar-brand">Jeff Mullen</h1>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon d-flex justify-content-center"><i className="fas fa-bars align-self-center"></i></span>
-                </button>
-                <div id="navbarSupportedContent" className="collapse navbar-collapse">
-                    <ul className="nav-ul d-flex flex-column">
-                        <li><a href="#about"
-                            onClick={() => pageChange('About')}
-                            className={currentPage === 'About' ? 'active' : ''}>About</a></li>
-                        <li><a href="#applications"
-                            onClick={() => pageChange('Applications')}
-                            className={currentPage === 'Applications' ? 'active' : ''}>Portfolio</a></li>
-                        <li><a href="#contact"
-                            onClick={() => pageChange('Contact')}
-                            className={currentPage === 'Contact' ? 'active' : ''}>Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
+        <header className="header">
+            <Navbar collapseOnSelect expand="lg" variant="dark">
+                <Container>
+                    <Navbar.Brand>Jeff Mullen</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+                        <Nav className="me-auto d-lg-flex m-lg-0">
+                            <Nav.Link href="#about" onClick={() => pageChange('About')}>About</Nav.Link>
+                            <Nav.Link href="#applications" onClick={() => pageChange('Applications')}>Portfolio</Nav.Link>
+                            <Nav.Link href="#contact" onClick={() => pageChange('Contact')}>Contact</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
         </header>
     )
 }
