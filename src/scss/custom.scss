@@ -14,7 +14,8 @@ $link-glow-color: #20E99F;
 $navbar-dark-brand-color: $strong-color;
 $navbar-dark-hover-color: $strong-color;
 $navbar-dark-active-color: $strong-color;
-// $navbar-dark-color: $strong-color;
+$content-text-color: rgba(255, 255, 255, 0.55);
+
 $container-max-widths: (
     md: 100%,
     // xxl: 1600px
@@ -22,7 +23,14 @@ $container-max-widths: (
 
 @import '~bootstrap/scss/bootstrap.scss';
 
+* {
+    padding: 0;
+    margin: 0;
+    font-family: $heading-font;
+    // overflow-x: hidden;
+}
 
+// Navbar Styles
 .navbar {
     background: $body-bg;
     box-shadow: 0 2px 2px $dark-bg;
@@ -53,12 +61,88 @@ span.navbar-brand:hover {
 
 .navbar-toggler {
     border: none;
-    // color: $strong-color;
 }
 
 .container .navbar-toggler {
     outline: none;
     box-shadow: none;
+}
+
+// Main Section styles that include About, Portfolio, and Contact
+main {
+    margin-top: 50px;
+    color: rgb(227, 227, 227);
+}
+
+.row {
+    width: inherit;
+}
+
+img {
+    width: 85%;
+}
+
+@media screen and (min-width: 400px) {
+
+    // .about-paragraph {
+    //     width: 90%;
+    // }
+}
+
+@media screen and (min-width: 530px) {
+    img {
+        width: 70%;
+    }
+
+    // .about-paragraph {
+    //     width: 70%;
+    // }
+}
+
+@media screen and (min-width: 650px) {
+    img {
+        width: 60%;
+    }
+
+    // .about-paragraph {
+    //     width: 60%
+    // }
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
+    .navbar-nav {
+        font-size: 1rem;
+    }
+
+    .bio-row {
+        height: 750px;
+    }
+
+    .bio-row .col:nth-child(3) {
+        background: linear-gradient($body-bg, $body-bg) padding-box,
+        linear-gradient(135deg, $body-bg, $body-bg, $strong-color) border-box;
+        border: 3px solid transparent;
+    }
+
+    .bio-row .col:nth-child(2) {
+        background: linear-gradient($body-bg, $body-bg) padding-box,
+        linear-gradient(135deg, $strong-color, $body-bg, $body-bg) border-box;
+        border: 3px solid transparent;
+    }
+
+    .bio-row img {
+        background: linear-gradient($body-bg, $body-bg) padding-box,
+        linear-gradient(90deg, $body-bg, $strong-color, $body-bg) border-box;
+        border: 3px solid transparent;
+    }
+
+    img {
+        width: 80%;
+    }
 }
 
 @media screen and (min-width: 1600px) {

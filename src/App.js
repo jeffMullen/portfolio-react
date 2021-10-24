@@ -30,7 +30,7 @@ function App() {
     <div id="reactApp">
       <Header currentPage={currentPage} pageChange={pageChange} />
       <main>
-        {/* {renderPage()} */}
+        {renderPage()}
       </main>
       {/* <Footer /> */}
     </div>
