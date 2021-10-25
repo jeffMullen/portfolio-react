@@ -69,7 +69,8 @@ span.navbar-brand:hover {
 
 // Main Section styles that include About, Portfolio, and Contact
 main {
-    margin-top: 50px;
+    max-width: 1600px;
+    margin: 50px auto;
     color: rgb(227, 227, 227);
 }
 
@@ -145,5 +146,9 @@ main {
 
     .navbar .container {
         padding: 0 25px;
+    }
+
+    .bio-row img {
+        width: 70%;
     }
 }
