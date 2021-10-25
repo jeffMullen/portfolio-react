@@ -7,7 +7,7 @@ function About() {
     return (
         <section className="about">
             <Bio />
-            {/* <Skills /> */}
+            <Skills />
         </section>
     );
 }

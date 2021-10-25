@@ -1,30 +1,38 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function Skills() {
+
+    const skillsArr = [
+        'JavaSCript',
+        'CSS',
+        'React',
+        'Bootstrap',
+        'jQuery',
+        'Express',
+        'Node',
+        'MySQL',
+        'Sequelize',
+        'Handlebars',
+        'Jest'
+    ]
+
     return (
-        <section className="skills section-heading">
-            {/* <!-- Skills Section --> */}
-            <h2>Skills</h2>
-
-            {/* <!-- Divider between heading and content --> */}
-
-            <div className="divider"></div>
-
+        <Container>
+            <Row>
+                <Col>
+                    <h2>Skills</h2>
+                </Col>
+            </Row>
             {/* <!-- Skills content --> */}
-            <div className="skills-content">
-                <p>JavaScript</p>
-                <p>CSS</p>
-                <p>HTML</p>
-                <p>Bootstrap</p>
-                <p>jQuery</p>
-                <p>Express</p>
-                <p>Node</p>
-                <p>MySQL</p>
-                <p>Sequelize</p>
-                <p>Handlebars</p>
-                <p>Jest</p>
-            </div>
-        </section>
+            <Row>
+                <Col>
+                    {skillsArr.map(skill => <p>{skill}</p>)}
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
