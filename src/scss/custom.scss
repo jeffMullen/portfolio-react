@@ -109,17 +109,27 @@ main {
 
 // Portfolio Section Stylings
 .project {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient($body-bg, $body-bg) padding-box,
-    linear-gradient(200deg, $body-bg, $strong-color, $strong-color, $body-bg) border-box;
+    linear-gradient(200deg, $body-bg, $body-bg, $strong-color, $strong-color, $strong-color, $strong-color, $body-bg, $body-bg) border-box;
     border: 3px solid transparent;
     width: 275px;
 }
 
+.project div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 243px;
+    height: 243px;
+    overflow: hidden;
+}
+
 .project h3 {
+    font-size: 1.4rem;
     position: absolute;
     background: $strong-color;
     color: $body-bg;
@@ -127,20 +137,21 @@ main {
     border-radius: 5px;;
 }
 
-.project img {
-    width: 243px;
-    height: 243px;
-}
-
 @media screen and (min-width: 375px) {
     .project {
         width: 332px;
+        height: 332px;
     }
 
-    .project img {
+    .project div {
         width: 300px;
         height: 300px;
     }
+
+    // .project img {
+    //     width: 300px;
+    //     height: 300px;
+    // }
 }
 
 @media screen and (min-width: 530px) {
