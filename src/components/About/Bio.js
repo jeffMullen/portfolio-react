@@ -12,6 +12,8 @@ function Bio() {
                     <h2>Hi, I'm Jeff, Frontend Developer.</h2>
                 </Col>
             </Row>
+
+            {/* Section starts in flex-column, then at extra-large screens it switches to flex-row.  Then it switches to a diagonal layout */}
             <Row className="bio-row mt-5 mx-0 px-0 text-center d-flex flex-column flex-xl-row align-items-center">
                 <Col className="p-0 mt-lg-5 text-center col-md-8 col-lg-7 col-xl-4 order-lg-2">
                     <img className="p-0" src="./images/self-portrait1.jpg" alt="Self-Portrait" />

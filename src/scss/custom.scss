@@ -73,10 +73,6 @@ main {
     color: rgb(227, 227, 227);
 }
 
-.row {
-    width: inherit;
-}
-
 .bio-row img {
     width: 85%;
 }
@@ -98,6 +94,14 @@ main {
     background: linear-gradient($body-bg, $body-bg) padding-box,
     linear-gradient(200deg, $body-bg, $strong-color, $body-bg) border-box;
     border: 3px solid transparent;
+}
+
+// Skills section stylings
+.skills p {
+    display: inline-block;
+    background: linear-gradient($body-bg, $body-bg) padding-box,
+    linear-gradient(90deg, $body-bg, $body-bg, $strong-color, $body-bg, $body-bg) border-box;
+    border: 1px solid transparent;
 }
 
 @media screen and (min-width: 530px) {
