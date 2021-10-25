@@ -29,7 +29,7 @@ function Bio() {
                     </p>
                 </Col>
                 <Col className="about-paragraph mt-5 p-0 col-md-8 col-lg-7 col-xl-4 text-center order-lg-3 align-self-xl-end">
-                    <p className="p-3 pt-0 pt-xl-3">This methodology is what allows me to thrive in the development of quality applications.
+                    <p className="p-3">This methodology is what allows me to thrive in the development of quality applications.
                         Functionality and presentation are linked together. Studying and internalizing the fundamentals
                         of programming allow for balance within my process. Through my experiences I have developed the
                         ability to empathize with people, and discover what their needs are. This is a skill that I find
