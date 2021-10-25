@@ -7,6 +7,8 @@
 $heading-font: 'Montserrat', sans-serif;
 $content-font: 'Rubik', sans-serif;
 
+
+// Colors
 $dark-bg: #0A141F;
 $body-bg: #0d1b2a;
 $strong-color: #16DB93;
@@ -97,12 +99,48 @@ main {
     border: 3px solid transparent;
 }
 
-// Skills section stylings
+// Skills Section Stylings
 .skills p {
     display: inline-block;
     background: linear-gradient($body-bg, $body-bg) padding-box,
     linear-gradient(90deg, $body-bg, $body-bg, $strong-color, $body-bg, $body-bg) border-box;
     border: 1px solid transparent;
+}
+
+// Portfolio Section Stylings
+.project {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient($body-bg, $body-bg) padding-box,
+    linear-gradient(200deg, $body-bg, $strong-color, $strong-color, $body-bg) border-box;
+    border: 3px solid transparent;
+    width: 275px;
+}
+
+.project h3 {
+    position: absolute;
+    background: $strong-color;
+    color: $body-bg;
+    padding: 5px 15px;
+    border-radius: 5px;;
+}
+
+.project img {
+    width: 243px;
+    height: 243px;
+}
+
+@media screen and (min-width: 375px) {
+    .project {
+        width: 332px;
+    }
+
+    .project img {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 @media screen and (min-width: 530px) {

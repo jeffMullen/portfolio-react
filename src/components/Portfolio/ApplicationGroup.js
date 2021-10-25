@@ -1,5 +1,7 @@
 import React from 'react';
 import Project from './Project';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function ApplicationGroup({ modalHandler }) {
     const applications = [
@@ -47,28 +49,25 @@ function ApplicationGroup({ modalHandler }) {
             image: './images/shifaaz-shamoon-oR0uERTVyD0-unsplash.jpg',
             tech: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit',
             description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus dignissimos'
+        },
+        {
+            id: 5,
+            title: 'Placeholder',
+            deployed: '#',
+            github: '#',
+            image: './images/shifaaz-shamoon-oR0uERTVyD0-unsplash.jpg',
+            tech: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit',
+            description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus dignissimos'
         }
     ]
 
     return (
+        <Row className="portfolio mt-5">
 
-        <div className="applications-content">
-
-            {/* <!-- Largest image in flexbox --> */}
-
-            <Project project={applications[0]} modalHandler={modalHandler} />
-
-            <div className="app-wrapper">
-                {applications.map((project, index) => {
-                    if (index > 0) {
-                        return <Project key={index} project={project} modalHandler={modalHandler} />
-                    };
-                    return null;
-                })}
-            </div>
-            {/* <!-- Smaller images of applications flexbox --> */}
-
-        </div>
+            {applications.map((project) => {
+                return <Col className="col-12 mb-3 d-flex justify-content-center"><Project project={project} modalHandler={modalHandler} /></Col>
+            })}
+        </Row>
 
     )
 }
