@@ -2,16 +2,9 @@ import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 
 function ProjectModal({ modal, modalShow, setModalShow }) {
-    console.log('In modal file')
     let { title, deployed, github, tech, description } = modal;
-    // setModalShow(true);
-    console.log(modalShow)
-
-
-
 
     return (
-        // <Modal.Dialog>
         <Modal
             show={modalShow}
             size="md"
@@ -20,20 +13,17 @@ function ProjectModal({ modal, modalShow, setModalShow }) {
             onHide={() => setModalShow(false)}
         >
             <Modal.Header closeButton>
-                <Modal.Title id="contained-modal-title-vcenter">
+                <Modal.Title className="m-2" id="contained-modal-title-vcenter">
                     {title}
                 </Modal.Title>
             </Modal.Header>
-            <Modal.Body>
-                <h4>Centered Modal</h4>
-                <p>
-                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-                    dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-                    consectetur ac, vestibulum at eros.
-                </p>
+            <Modal.Body className="d-flex justify-content-around">
+                <a href={deployed} rel="noreferrer" target="_blank" className="col-6 text-center">Live Application</a>
+                <a href={github} rel="noreferrer" target="_blank" className="col-6 text-center">GitHub Repository</a>
             </Modal.Body>
-            <Modal.Footer>
-
+            <Modal.Footer className="d-flex flex-column align-items-start">
+                <p className="col">{tech}</p>
+                <p className="col">{description}</p>
             </Modal.Footer>
         </Modal>
     )

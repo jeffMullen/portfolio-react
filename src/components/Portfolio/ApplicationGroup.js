@@ -17,7 +17,7 @@ function ApplicationGroup({ modalHandler, setModalShow }) {
         {
             id: 2,
             title: 'Star Books',
-            deployed: 'https://az84.github.io/Project-1/',
+            deployed: 'https://az84.github.io/Star-Books/',
             github: 'https://github.com/az84/Project-1',
             image: './images/star-books.png',
             tech: 'JavaScript, jQuery, Zurb CSS Framework, Google Books API, New York Times API, CSS, HTML',

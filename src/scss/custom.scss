@@ -16,7 +16,7 @@ $link-glow-color: #20E99F;
 $navbar-dark-brand-color: $strong-color;
 $navbar-dark-hover-color: $strong-color;
 $navbar-dark-active-color: $strong-color;
-$content-text-color: rgba(255, 255, 255, 0.55);
+$content-text-color: rgb(227, 227, 227);
 
 $container-max-widths: (
     md: 100%,
@@ -77,7 +77,7 @@ span.navbar-brand:hover {
 main {
     max-width: 1600px;
     margin: 50px auto;
-    color: rgb(227, 227, 227);
+    color: $content-text-color;
 }
 
 .bio-row img {
@@ -149,13 +149,63 @@ main {
         }
         h3 {
             transform: translateY(-.25rem);
-        box-shadow: 0 0.5rem 0.5rem -0.4rem $body-bg;
+            box-shadow: 0 0.5rem 0.5rem -0.4rem $dark-bg;
         }
     }
 }
 
 .project:hover {
     cursor: pointer;
+}
+
+// Modal Styles
+.modal-content {
+    padding: 5px 15px 15px 15px;
+    background: linear-gradient(#0f2a47, $body-bg) padding-box,
+    linear-gradient(200deg, $body-bg, $body-bg, $strong-color, $strong-color, $strong-color, $strong-color, $body-bg, $body-bg) border-box;
+    border: 3px solid transparent;
+    border-radius: 0px;
+    .modal-title {
+        font-family: $content-font;
+        margin-bottom: 10px;
+        background: $strong-color;
+        color: $body-bg;
+        padding: 3px 10px;
+        border-radius: 2px;
+    }
+    .modal-header {
+        .btn-close {
+            color: var(--link-glow-color);
+        }
+    }
+    .modal-body {
+        a {
+            display: block;
+            color: $strong-color;
+            font-family: $content-font;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            width: fit-content;
+            height: fit-content;
+        }
+    }
+    .modal-footer {
+        // min-height: 150px;
+        color: white;
+        p {
+            letter-spacing: 1px;
+            font-size: .9rem;
+            padding: 0 15px;
+        }
+        p:first-child {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        p:last-child {
+            margin-bottom: 15px;
+        }
+    }
 }
 
 @media screen and (min-width: 375px) {
@@ -168,11 +218,6 @@ main {
         width: 300px;
         height: 300px;
     }
-
-    // .project img {
-    //     width: 300px;
-    //     height: 300px;
-    // }
 }
 
 @media screen and (min-width: 530px) {
