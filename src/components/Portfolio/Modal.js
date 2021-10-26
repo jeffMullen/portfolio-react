@@ -4,18 +4,20 @@ import Modal from 'react-bootstrap/Modal';
 function ProjectModal({ modal, modalShow, setModalShow }) {
     console.log('In modal file')
     let { title, deployed, github, tech, description } = modal;
-    setModalShow(true);
+    // setModalShow(true);
     console.log(modalShow)
 
 
 
 
     return (
+        // <Modal.Dialog>
         <Modal
-            {...modalShow}
-            size="lg"
+            show={modalShow}
+            size="md"
             aria-labelledby="contained-modal-title-vcenter"
             centered
+            onHide={() => setModalShow(false)}
         >
             <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">
@@ -34,26 +36,6 @@ function ProjectModal({ modal, modalShow, setModalShow }) {
 
             </Modal.Footer>
         </Modal>
-        // <div className="modal fade" tabIndex="-1" id="project-modal">
-        //     <div className="modal-dialog">
-        //         <div className="modal-content">
-        //             <div className="modal-header">
-        //                 <h5 className="modal-title">{title}</h5>
-        //                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-        //                     <span aria-hidden="true">&times;</span>
-        //                 </button>
-        //             </div>
-        //             <div className="modal-body row">
-        //                 <a id="liveApp" href={deployed} className="col-6" rel="noreferrer" target="_blank">Live Application</a>
-        //                 <a id="gitHubRepo" href={github} className="col-6" rel="noreferrer" target="_blank">GitHub Repository</a>
-        //             </div>
-        //             <div className="modal-footer row">
-        //                 <p id="projectDescription" className="col-12">{description}</p>
-        //                 <p id="techUsed" className="col-12">{tech}</p>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </div>
     )
 }
 

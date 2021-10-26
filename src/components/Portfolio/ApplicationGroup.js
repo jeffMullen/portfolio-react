@@ -3,7 +3,7 @@ import Project from './Project';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-function ApplicationGroup({ modalHandler }) {
+function ApplicationGroup({ modalHandler, setModalShow }) {
     const applications = [
         {
             id: 1,
@@ -65,7 +65,7 @@ function ApplicationGroup({ modalHandler }) {
         <Row key="1" className="portfolio mt-5">
 
             {applications.map((project, index) => {
-                return <Col key={index} className="col-12 col-md-6 col-xl-4 mb-3 d-flex justify-content-center"><Project index={index} project={project} modalHandler={modalHandler} /></Col>
+                return <Col key={index} className="col-12 col-md-6 col-xl-4 mb-3 d-flex justify-content-center"><Project index={index} project={project} modalHandler={modalHandler} setModalShow={setModalShow} /></Col>
             })}
         </Row>
 

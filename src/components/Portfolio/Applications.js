@@ -31,7 +31,7 @@ function Applications() {
                 </Col>
             </Row>
 
-            <ApplicationGroup modalHandler={modalHandler} />
+            <ApplicationGroup modalHandler={modalHandler} setModalShow={setModalShow} />
 
 
             <ProjectModal modalShow={modalShow} setModalShow={setModalShow} modal={modal} />

@@ -139,16 +139,18 @@ main {
         padding: 8px 15px;
         transition: .2s;
     }
-    h3:hover {
-        transform: translateY(-.25rem);
-        box-shadow: 0 0.5rem 0.5rem -0.4rem $body-bg;
-    }
     img {
         opacity: 0.8;
         transition: .5s;
     }
-    img:hover {
-        opacity: 1;
+    div:hover {
+        img {
+            opacity: 1;
+        }
+        h3 {
+            transform: translateY(-.25rem);
+        box-shadow: 0 0.5rem 0.5rem -0.4rem $body-bg;
+        }
     }
 }
 
