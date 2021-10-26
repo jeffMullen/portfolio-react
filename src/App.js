@@ -5,6 +5,7 @@ import './scss/custom.scss';
 import Header from './components/Header';
 import About from './components/About/About';
 import Applications from './components/Portfolio/Applications';
+import Contact from './components/Contact/Contact';
 import Footer from './components/Footer';
 
 function App() {
@@ -19,8 +20,8 @@ function App() {
     if (currentPage === 'Applications') {
       return <Applications />;
     }
-    // if (currentPage === 'Contact')
-    // return <Contact />;
+    if (currentPage === 'Contact')
+      return <Contact />;
   };
 
   const pageChange = (page) => setCurrentPage(page);
