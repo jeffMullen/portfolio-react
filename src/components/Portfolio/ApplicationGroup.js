@@ -62,10 +62,10 @@ function ApplicationGroup({ modalHandler }) {
     ]
 
     return (
-        <Row className="portfolio mt-5">
+        <Row key="1" className="portfolio mt-5">
 
-            {applications.map((project) => {
-                return <Col className="col-12 col-md-6 col-xl-4 mb-3 d-flex justify-content-center"><Project project={project} modalHandler={modalHandler} /></Col>
+            {applications.map((project, index) => {
+                return <Col key={index} className="col-12 col-md-6 col-xl-4 mb-3 d-flex justify-content-center"><Project index={index} project={project} modalHandler={modalHandler} /></Col>
             })}
         </Row>
 

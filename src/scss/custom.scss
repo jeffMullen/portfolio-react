@@ -69,6 +69,10 @@ span.navbar-brand:hover {
     box-shadow: none;
 }
 
+.active {
+    color: $strong-color;
+}
+
 // Main Section styles that include About, Portfolio, and Contact
 main {
     max-width: 1600px;
@@ -116,25 +120,40 @@ main {
     linear-gradient(200deg, $body-bg, $body-bg, $strong-color, $strong-color, $strong-color, $strong-color, $body-bg, $body-bg) border-box;
     border: 3px solid transparent;
     width: 275px;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 243px;
+        height: 243px;
+        overflow: hidden;
+    }
+    h3 {
+        z-index: 1;
+        font-size: 1.4rem;
+        position: absolute;
+        background: $body-bg;
+        color: $strong-color;
+        border: 2px solid $strong-color;
+        padding: 8px 15px;
+        transition: .2s;
+    }
+    h3:hover {
+        transform: translateY(-.25rem);
+        box-shadow: 0 0.5rem 0.5rem -0.4rem $body-bg;
+    }
+    img {
+        opacity: 0.8;
+        transition: .5s;
+    }
+    img:hover {
+        opacity: 1;
+    }
 }
 
-.project div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 243px;
-    height: 243px;
-    overflow: hidden;
-}
-
-.project h3 {
-    font-size: 1.4rem;
-    position: absolute;
-    background: $strong-color;
-    color: $body-bg;
-    padding: 5px 15px;
-    border-radius: 5px;;
+.project:hover {
+    cursor: pointer;
 }
 
 @media screen and (min-width: 375px) {

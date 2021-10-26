@@ -29,7 +29,7 @@ function Skills() {
             </Row>
             <Row className="mt-5">
                 <Col className="text-center">
-                    {skillsArr.map(skill => <p className="col-6 col-sm-4 col-lg-3 mb-4 py-2 text-center">{skill}</p>)}
+                    {skillsArr.map(skill => <p key={skill} className="col-6 col-sm-4 col-lg-3 mb-4 py-2 text-center">{skill}</p>)}
                 </Col>
             </Row>
         </Container>

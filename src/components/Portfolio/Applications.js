@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ApplicationGroup from './ApplicationGroup';
-import Modal from './Modal';
+import ProjectModal from './Modal';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -17,8 +17,9 @@ function Applications() {
         description: ''
     })
 
-    function modalHandler(project) {
+    const [modalShow, setModalShow] = useState(false);
 
+    function modalHandler(project) {
         setModal(project);
     }
 
@@ -33,7 +34,7 @@ function Applications() {
             <ApplicationGroup modalHandler={modalHandler} />
 
 
-            <Modal modal={modal} />
+            <ProjectModal modalShow={modalShow} setModalShow={setModalShow} modal={modal} />
         </Container >
 
     );

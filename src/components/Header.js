@@ -13,7 +13,7 @@ function Header({ currentPage, pageChange }) {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
                         <Nav className="me-auto d-lg-flex m-lg-0">
-                            <Nav.Link href="#about" onClick={() => pageChange('About')}>About</Nav.Link>
+                            <Nav.Link href="#about" className={currentPage === 'About' ? 'active' : ''} onClick={() => pageChange('About')}>About</Nav.Link>
                             <Nav.Link href="#applications" onClick={() => pageChange('Applications')}>Portfolio</Nav.Link>
                             <Nav.Link href="#contact" onClick={() => pageChange('Contact')}>Contact</Nav.Link>
                         </Nav>
