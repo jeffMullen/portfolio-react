@@ -27,7 +27,7 @@ function Applications() {
         <Container>
             <Row>
                 <Col className="text-center">
-                    <h2>Portfolio</h2>
+                    <h2>Portfolio.</h2>
                 </Col>
             </Row>
 
