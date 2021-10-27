@@ -38,6 +38,20 @@ html {
     min-height: 100vh;
 }
 
+body {
+    height: 100%;
+}
+
+.react-app {
+    min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    flex: 1 0 auto;
+
+}
+
 // Navbar Styles
 .navbar {
     background: $body-bg;
@@ -259,7 +273,7 @@ h6 {
 // Resume Section Styling
 
 .resume-page {
-    margin-top: 600px;
+    height: inherit;
 }
 
 .resume a {
@@ -284,6 +298,11 @@ h6 {
     background: linear-gradient($body-bg, $body-bg) padding-box,
     linear-gradient(90deg, $body-bg, $body-bg, $strong-color, $body-bg, $body-bg) border-box;
     border: 1px solid transparent;
+}
+
+// Footer Styles
+footer {
+    margin-top: auto;
 }
 
 @media screen and (min-width: 375px) {

@@ -31,12 +31,12 @@ function App() {
 
 
   return (
-    <div id="reactApp">
+    <div id="reactApp" className="react-app d-flex flex-column justify-content-between">
       <Header currentPage={currentPage} pageChange={pageChange} />
       <main>
         {renderPage()}
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
