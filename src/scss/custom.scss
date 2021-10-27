@@ -1,0 +1,376 @@
+// Montserrat font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Rubik:wght@400;500;600;700&display=swap');
+
+// Override and Custom Variables
+// Font-families
+$heading-font: 'Montserrat', sans-serif;
+$content-font: 'Rubik', sans-serif;
+
+
+// Colors
+$dark-bg: #0A141F;
+$body-bg: #0d1b2a;
+$strong-color: #16DB93;
+$link-glow-color: #20E99F;
+// Navbar overrides
+$navbar-dark-brand-color: $strong-color;
+$navbar-dark-hover-color: $strong-color;
+$navbar-dark-active-color: $strong-color;
+
+
+$content-text-color: rgb(227, 227, 227);
+
+$container-max-widths: (
+    md: 100%,
+    // xxl: 1600px
+);
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: $heading-font;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    height: 100%;
+}
+
+.react-app {
+    min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    flex: 1 0 auto;
+
+}
+
+// Navbar Styles
+.navbar {
+    background: $body-bg;
+    box-shadow: 0 2px 2px $dark-bg;
+}
+
+.navbar .container {
+    padding: 0 15px;
+}
+
+.navbar-brand {
+    font-family: $heading-font;
+    &:hover {
+        color: $strong-color;
+    }
+}
+
+span.navbar-brand:hover {
+    color: $strong-color;
+    cursor: default;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus
+ {
+    color: $strong-color;
+}
+
+
+.navbar-toggler {
+    border: none;
+}
+
+.container .navbar-toggler {
+    outline: none;
+    box-shadow: none;
+}
+
+.active {
+    color: $strong-color;
+}
+
+// Main Section styles that include About, Portfolio, and Contact
+main {
+    max-width: 1600px;
+    margin: 50px auto;
+    color: $content-text-color;
+}
+
+.bio-row img {
+    width: 85%;
+}
+
+// Gradient Borders on Bio section elements
+.bio-row .col:nth-child(3) {
+    background: linear-gradient($body-bg, $body-bg) padding-box,
+    linear-gradient(135deg, $body-bg, $body-bg, $strong-color) border-box;
+    border: 3px solid transparent;
+}
+
+.bio-row .col:nth-child(2) {
+    background: linear-gradient($body-bg, $body-bg) padding-box,
+    linear-gradient(135deg, $strong-color, $body-bg, $body-bg) border-box;
+    border: 3px solid transparent;
+}
+
+.bio-row img {
+    background: linear-gradient($body-bg, $body-bg) padding-box,
+    linear-gradient(200deg, $body-bg, $strong-color, $body-bg) border-box;
+    border: 3px solid transparent;
+}
+
+// Portfolio Section Stylings
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // Gradient border styles
+    background: linear-gradient($body-bg, $body-bg) padding-box,
+    linear-gradient(200deg, $body-bg, $body-bg, $strong-color, $strong-color, $strong-color, $strong-color, $body-bg, $body-bg) border-box;
+    border: 3px solid transparent;
+    width: 275px;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 243px;
+        height: 243px;
+        overflow: hidden;
+    }
+    h3 {
+        z-index: 1;
+        font-size: 1.4rem;
+        position: absolute;
+        background: $body-bg;
+        color: $strong-color;
+        border: 2px solid $strong-color;
+        padding: 8px 15px;
+        transition: .2s;
+    }
+    img {
+        opacity: 0.8;
+        transition: .5s;
+    }
+    div:hover {
+        img {
+            opacity: 1;
+        }
+        h3 {
+            transform: translateY(-.25rem);
+            box-shadow: 0 0.5rem 0.5rem -0.4rem $dark-bg;
+        }
+    }
+}
+
+.project:hover {
+    cursor: pointer;
+}
+
+// Modal Styles
+.modal-content {
+    padding: 5px 15px 15px 15px;
+    // Gradient border styles
+    background: linear-gradient(#0f2a47, $body-bg) padding-box,
+    linear-gradient(200deg, $body-bg, $body-bg, $strong-color, $strong-color, $strong-color, $strong-color, $body-bg, $body-bg) border-box;
+    border: 3px solid transparent;
+    border-radius: 0px;
+    .modal-title {
+        font-family: $content-font;
+        margin-bottom: 10px;
+        background: $strong-color;
+        color: $body-bg;
+        padding: 3px 10px;
+        border-radius: 2px;
+    }
+    .modal-header {
+        .btn-close {
+            color: var(--link-glow-color);
+        }
+    }
+    .modal-body {
+        a {
+            display: block;
+            color: $strong-color;
+            font-family: $content-font;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            width: fit-content;
+            height: fit-content;
+        }
+    }
+    .modal-footer {
+        // min-height: 150px;
+        color: white;
+        p {
+            letter-spacing: 1px;
+            font-size: .9rem;
+            padding: 0 15px;
+        }
+        p:first-child {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        p:last-child {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+// Contact Styles
+h6 {
+    color: $strong-color;
+}
+
+.contactForm {
+    width: 75%;
+    margin: auto;
+    color: $content-text-color;
+    input,
+    textarea {
+        color: $content-text-color;
+        background: linear-gradient(#0f2a47, $dark-bg) padding-box,
+        linear-gradient(90deg, $strong-color, $body-bg) border-box;
+        border: 1px solid transparent;
+        box-shadow: none;
+        padding: 10px;
+    }
+    input {
+        height: 2.5rem;
+    }
+    input:active,
+    input:focus, 
+    textarea:active,
+    textarea:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    button {
+        margin-top: 20px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        background: $body-bg;
+        color: $content-text-color;
+        border: 2px solid $strong-color;
+        padding: 8px 15px;
+        transition: .2s;
+    }
+    button:hover {
+        transform: translateY(-.25rem);
+        box-shadow: 0 0.5rem 0.5rem -0.4rem $strong-color;
+    }
+    .submit-failure {
+        color: rgb(255, 0, 238);
+    }
+}
+
+// Resume Section Styling
+
+.resume-page {
+    height: inherit;
+}
+
+.resume a {
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background: $body-bg;
+    color: $content-text-color;
+    border: 2px solid $strong-color;
+    padding: 8px 15px;
+    transition: 0.2s;
+    &:hover {
+        transform: translateY(.25rem);
+        box-shadow: 0 0.5rem 0.5rem -0.4rem $strong-color;
+    }
+}
+
+// Skills Section Stylings
+.skills p {
+    display: inline-block;
+    background: linear-gradient($body-bg, $body-bg) padding-box,
+    linear-gradient(90deg, $body-bg, $body-bg, $strong-color, $body-bg, $body-bg) border-box;
+    border: 1px solid transparent;
+}
+
+// Footer Styles
+footer {
+    margin-top: auto;
+}
+
+@media screen and (min-width: 375px) {
+    .project {
+        width: 332px;
+        height: 332px;
+    }
+
+    .project div {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 530px) {
+    .bio-row img {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .bio-row img {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .contactForm {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
+    .navbar-nav {
+        font-size: 1rem;
+    }
+
+    .bio-row {
+        height: 775px;
+    }
+
+    .bio-row img {
+        width: 80%;
+    }
+
+    .contactForm {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .navbar-brand {
+        font-size: 2rem;
+    }
+
+    .navbar-nav {
+        font-size: 1.2rem;
+    }
+
+    .navbar .container {
+        padding: 0 25px;
+    }
+
+    .bio-row img {
+        width: 70%;
+    }
+}

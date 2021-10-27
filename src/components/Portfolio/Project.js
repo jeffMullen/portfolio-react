@@ -1,15 +1,15 @@
 import React from "react";
 
-function Project({ modalHandler, project }) {
+function Project({ modalHandler, project, setModalShow }) {
     return (
-        <div key={project.id}>
-            <h3><span>{project.title}</span></h3>
-            <p>{project.deployed}</p>
-            <p>{project.github}</p>
-            <img onClick={() => modalHandler(project)} data-toggle="modal" data-target="#application-modal"
-                src={project.image} alt={`Link to ${project.title} information`} />
-            <p>{project.tech}</p>
-            <p>{project.description}</p>
+        <div key={project.id} onClick={() => {
+            modalHandler(project);
+            setModalShow(true);
+        }} className="project p-3">
+            <div>
+                <h3><span>{project.title}</span></h3>
+                <img src={project.image} alt={`Link to ${project.title} information`} />
+            </div>
         </div>
     )
 }

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+:root {
+    --dark-background: #0A141F;
+    --background: #0d1b2a;
+    --text-color: #C4C5BE;
+    --strong-color: #16DB93;
+    --link-glow-color: #20E99F;
+    --heading-font: 'Rubik', sans-serif;
+    --content-font: 'Montserrat', sans-serif;
+    --element-padding: 20px;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background: var(--background);
+}
+
+/* Header Styles ---------------------- */
+
+header {
+    background: var(--dark-background);
+    color: #16DB93;
+    font-family: var(--heading-font);
+
+}
+
+nav.navbar {
+    padding: 0;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+/* Nav Hamburger Icon */
+.fas,
+.fa-bars {
+    color: var(--strong-color);
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+.nav-ul {
+    padding-left: .5rem;
+}
+
+.nav-ul li {
+    list-style: none;
+    padding-bottom: .2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--strong-color);
+}
+
+header a:hover,
+.modal-content a:hover,
+.active {
+    color: var(--link-glow-color);
+  text-shadow: 
+  0 0 10px var(--strong-color);
+  text-decoration: none;
+}

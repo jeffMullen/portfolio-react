@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import ApplicationGroup from './ApplicationGroup';
-import Modal from './Modal';
+import ProjectModal from './Modal';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function Applications() {
 
@@ -14,26 +17,25 @@ function Applications() {
         description: ''
     })
 
-    function modalHandler(project) {
+    const [modalShow, setModalShow] = useState(false);
 
+    function modalHandler(project) {
         setModal(project);
     }
 
     return (
+        <Container>
+            <Row>
+                <Col className="text-center">
+                    <h2>Portfolio.</h2>
+                </Col>
+            </Row>
 
-        <section className="applications section-heading">
-            {/* <!-- Applications section --> */}
-            <h2>Applications</h2>
+            <ApplicationGroup modalHandler={modalHandler} setModalShow={setModalShow} />
 
-            {/* <!-- Divider between heading and content --> */}
 
-            <div className="divider"></div>
-
-            {/* <!-- Overall applications flexbox --> */}
-            <ApplicationGroup modalHandler={modalHandler} />
-
-            <Modal modal={modal} />
-        </section>
+            <ProjectModal modalShow={modalShow} setModalShow={setModalShow} modal={modal} />
+        </Container >
 
     );
 }
