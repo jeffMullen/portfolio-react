@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-// import './App.css';
-// import './index.css';
 import './scss/custom.scss';
 import Header from './components/Header';
 import About from './components/About/About';
 import Applications from './components/Portfolio/Applications';
 import Contact from './components/Contact/Contact';
+import Resume from './components/Resume/Resume';
 import Footer from './components/Footer';
 
 function App() {
@@ -20,8 +19,12 @@ function App() {
     if (currentPage === 'Applications') {
       return <Applications />;
     }
-    if (currentPage === 'Contact')
+    if (currentPage === 'Contact') {
       return <Contact />;
+    }
+    if (currentPage === 'Resume') {
+      return <Resume />
+    }
   };
 
   const pageChange = (page) => setCurrentPage(page);

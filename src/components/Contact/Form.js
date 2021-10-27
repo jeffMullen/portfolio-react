@@ -58,7 +58,6 @@ function Form({ handleSubmit }) {
                     onBlur={(e) => handleBlur(e)}
                     className="shadow-none" id="contactMessage"></textarea>
             </div>
-
             <button onClick={(e) => {
                 e.preventDefault();
                 if (nameValue !== '' && emailValue !== '' && messageValue !== '') {

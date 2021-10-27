@@ -16,6 +16,7 @@ function Header({ currentPage, pageChange }) {
                             <Nav.Link href="#about" className={currentPage === 'About' ? 'active' : ''} onClick={() => pageChange('About')}>About</Nav.Link>
                             <Nav.Link href="#applications" onClick={() => pageChange('Applications')}>Portfolio</Nav.Link>
                             <Nav.Link href="#contact" onClick={() => pageChange('Contact')}>Contact</Nav.Link>
+                            <Nav.Link href="#resume" onClick={() => pageChange('Resume')}>Resume</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
