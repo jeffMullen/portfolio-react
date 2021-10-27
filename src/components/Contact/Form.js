@@ -61,8 +61,17 @@ function Form({ handleSubmit }) {
 
             <button onClick={(e) => {
                 e.preventDefault();
-                handleSubmit(nameValue, emailValue, messageValue)
+                if (nameValue !== '' && emailValue !== '' && messageValue !== '') {
+                    handleSubmit(nameValue, emailValue, messageValue);
+                    setNameValue('');
+                    setEmailValue('');
+                    setMessageValue('');
+                    e.target.nextElementSibling.textContent = '';
+                } else {
+                    e.target.nextElementSibling.textContent = 'All fields must be filled';
+                }
             }} type="submit">Submit</button>
+            <p className="mt-4 submit-failure"></p>
         </form>
     )
 }

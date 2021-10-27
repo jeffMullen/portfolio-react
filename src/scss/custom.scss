@@ -252,6 +252,9 @@ main {
         transform: translateY(-.25rem);
         box-shadow: 0 0.5rem 0.5rem -0.4rem $strong-color;
     }
+    .submit-failure {
+        color: rgb(255, 0, 238);
+    }
 }
 
 
