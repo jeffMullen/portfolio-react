@@ -1,11 +1,13 @@
 import React from 'react';
 import Skills from './Skills';
 
+import resumePDF from '../../images/jeffrey-mullen-resume.pdf';
+
 function Resume() {
     return (
         <section className="resume-page d-flex flex-column mt-5">
             <div className="resume text-center mb-5 mt-2">
-                <a className="mt-5" href="./images/jeff-mullen-ats-resume-2.0.pdf"
+                <a className="mt-5" href={resumePDF}
                     rel="noreferrer"
                     target="_blank"
                 >Downloadable Resume</a>

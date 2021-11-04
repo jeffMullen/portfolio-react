@@ -4,6 +4,8 @@ import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import selfPortrait from '../../images/self-portrait1.jpg';
+
 function Bio() {
     return (
         <Container>
@@ -16,7 +18,7 @@ function Bio() {
             {/* Section starts in flex-column, then at extra-large screens it switches to flex-row.  Then it switches to a diagonal layout */}
             <Row className="bio-row mt-5 mx-0 px-0 text-center d-flex flex-column flex-xl-row align-items-center">
                 <Col className="p-0 mt-lg-5 text-center col-md-8 col-lg-7 col-xl-4 order-lg-2">
-                    <img className="p-0" src="./images/self-portrait1.jpg" alt="Self-Portrait" />
+                    <img className="p-0" src={selfPortrait} alt="Self-Portrait" />
                 </Col>
                 <Col className="about-paragraph mt-5 mt-lg-0 px-0 col-md-8 col-lg-7 col-xl-4 order-lg-1 align-self-xl-start">
                     <p className="p-3 mb-0">Hi. My name is Jeff. I am a developer who strives for truly presentable applications. There is a

@@ -3,6 +3,13 @@ import Project from './Project';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import groveImg from '../../images/grove-resize.png';
+import starBooksImg from '../../images/star-books.png';
+import techBlogImg from '../../images/tech-blog.png';
+import workoutImg from '../../images/workout-tracker.png';
+import weatherImg from '../../images/weather-dashboard-resize.png';
+import plannerImg from '../../images/day-planner.png';
+
 function ApplicationGroup({ modalHandler, setModalShow }) {
     const applications = [
         {
@@ -10,7 +17,7 @@ function ApplicationGroup({ modalHandler, setModalShow }) {
             title: 'Grove',
             deployed: 'http://obscure-ocean-20287.herokuapp.com/',
             github: 'https://github.com/lapshaffer/SustainableReviewsProject',
-            image: './images/grove-resize.png',
+            image: groveImg,
             tech: 'Handlebars, Chart.js, Bootstrap, Node, Express, JavaScript, CSS, express-session, jQuery, MySQL, Sequelize, dotenv, bycrypt',
             description: "A consumer lead review website to convey first-hand experience of a company's sustainability practices"
         },
@@ -19,7 +26,7 @@ function ApplicationGroup({ modalHandler, setModalShow }) {
             title: 'Star Books',
             deployed: 'https://az84.github.io/Star-Books/',
             github: 'https://github.com/az84/Project-1',
-            image: './images/star-books.png',
+            image: starBooksImg,
             tech: 'JavaScript, jQuery, Zurb CSS Framework, Google Books API, New York Times API, CSS, HTML',
             description: 'Search for a topic and see book results'
         },
@@ -28,7 +35,7 @@ function ApplicationGroup({ modalHandler, setModalShow }) {
             title: 'Tech Blog',
             deployed: 'https://safe-castle-68945.herokuapp.com/',
             github: 'https://github.com/jeffMullen/tech-blog',
-            image: './images/tech-blog.png',
+            image: techBlogImg,
             tech: 'JavaScript, Handlebars, Node, Sequelize, Express, Bootstrap',
             description: 'Tech forum in which a user can log in, write posts, comment on posts, and edit their own posts'
         },
@@ -37,7 +44,7 @@ function ApplicationGroup({ modalHandler, setModalShow }) {
             title: 'Workout Tracker',
             deployed: 'https://boiling-garden-95289.herokuapp.com/',
             github: 'https://github.com/jeffMullen/workout-tracker',
-            image: './images/workout-tracker.png',
+            image: workoutImg,
             tech: 'MongoDB, Mongoose, Express, Node, JavaScript, HTML, CSS',
             description: 'Exercise application that keeps track of previous workout statistics, as well as creating new workouts and exercises'
         },
@@ -46,7 +53,7 @@ function ApplicationGroup({ modalHandler, setModalShow }) {
             title: 'Weather Dashboard',
             deployed: 'https://jeffmullen.github.io/weather-dashboard/',
             github: 'https://github.com/jeffMullen/weather-dashboard',
-            image: './images/weather-dashboard-resize.png',
+            image: weatherImg,
             tech: 'JavaScript, jQuery, Open Weather API, Bootstrap CSS Framework, CSS, HTML',
             description: 'Search for weather by city'
         },
@@ -55,7 +62,7 @@ function ApplicationGroup({ modalHandler, setModalShow }) {
             title: 'Day Planner',
             deployed: 'https://jeffmullen.github.io/day-planner/',
             github: 'https://github.com/jeffMullen/day-planner',
-            image: './images/day-planner.png',
+            image: plannerImg,
             tech: 'Moment.js, JavaScript, jQuery, Bootstrap CSS Framework, CSS, HTML',
             description: 'Plan your day by saving events to app'
         },
