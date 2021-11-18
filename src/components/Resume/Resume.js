@@ -1,7 +1,7 @@
 import React from 'react';
 import Skills from './Skills';
 
-import resumePDF from '../../images/jeff-mullen.pdf';
+import resumePDF from '../../images/jeff-mullen-resume.pdf';
 
 function Resume() {
     return (
