@@ -8,12 +8,21 @@ import starBooksImg from '../../images/star-books.png';
 import techBlogImg from '../../images/tech-blog.png';
 import workoutImg from '../../images/workout-tracker.png';
 import weatherImg from '../../images/weather-dashboard-resize.png';
-import plannerImg from '../../images/day-planner.png';
+import recipeImg from '../../images/recipe-repo.png';
 
 function ApplicationGroup({ modalHandler, setModalShow }) {
     const applications = [
         {
             id: 1,
+            title: 'Recipe Repo',
+            deployed: 'https://desolate-atoll-16678.herokuapp.com/',
+            github: 'https://github.com/jeffMullen/recipe-residence',
+            image: recipeImg,
+            tech: 'React, MongoDB, Express, Node, GraphQL, Bootstrap, SCSS',
+            description: 'Designed for users to record their own recipes, search for recipes created by other users, and update each recipe to their own preferences. A way for families living at great distances to share recipes in our modern world.'
+        },
+        {
+            id: 2,
             title: 'Grove',
             deployed: 'http://obscure-ocean-20287.herokuapp.com/',
             github: 'https://github.com/lapshaffer/SustainableReviewsProject',
@@ -22,7 +31,7 @@ function ApplicationGroup({ modalHandler, setModalShow }) {
             description: "A consumer lead review website to convey first-hand experience of a company's sustainability practices"
         },
         {
-            id: 2,
+            id: 3,
             title: 'Star Books',
             deployed: 'https://az84.github.io/Star-Books/',
             github: 'https://github.com/az84/Project-1',
@@ -31,7 +40,7 @@ function ApplicationGroup({ modalHandler, setModalShow }) {
             description: 'Search for a topic and see book results'
         },
         {
-            id: 3,
+            id: 4,
             title: 'Tech Blog',
             deployed: 'https://safe-castle-68945.herokuapp.com/',
             github: 'https://github.com/jeffMullen/tech-blog',
@@ -40,7 +49,7 @@ function ApplicationGroup({ modalHandler, setModalShow }) {
             description: 'Tech forum in which a user can log in, write posts, comment on posts, and edit their own posts'
         },
         {
-            id: 4,
+            id: 5,
             title: 'Workout Tracker',
             deployed: 'https://boiling-garden-95289.herokuapp.com/',
             github: 'https://github.com/jeffMullen/workout-tracker',
@@ -49,22 +58,13 @@ function ApplicationGroup({ modalHandler, setModalShow }) {
             description: 'Exercise application that keeps track of previous workout statistics, as well as creating new workouts and exercises'
         },
         {
-            id: 5,
+            id: 6,
             title: 'Weather Dashboard',
             deployed: 'https://jeffmullen.github.io/weather-dashboard/',
             github: 'https://github.com/jeffMullen/weather-dashboard',
             image: weatherImg,
             tech: 'JavaScript, jQuery, Open Weather API, Bootstrap CSS Framework, CSS, HTML',
             description: 'Search for weather by city'
-        },
-        {
-            id: 6,
-            title: 'Day Planner',
-            deployed: 'https://jeffmullen.github.io/day-planner/',
-            github: 'https://github.com/jeffMullen/day-planner',
-            image: plannerImg,
-            tech: 'Moment.js, JavaScript, jQuery, Bootstrap CSS Framework, CSS, HTML',
-            description: 'Plan your day by saving events to app'
         },
     ]
 
