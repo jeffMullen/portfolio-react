@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio-react/static/css/main.e15b6db3.chunk.css",
+    "main.css": "/portfolio-react/static/css/main.844f6188.chunk.css",
     "main.js": "/portfolio-react/static/js/main.f0b1af83.chunk.js",
     "main.js.map": "/portfolio-react/static/js/main.f0b1af83.chunk.js.map",
     "runtime-main.js": "/portfolio-react/static/js/runtime-main.9be649ef.js",
@@ -10,7 +10,7 @@
     "static/js/3.8fe5e53c.chunk.js": "/portfolio-react/static/js/3.8fe5e53c.chunk.js",
     "static/js/3.8fe5e53c.chunk.js.map": "/portfolio-react/static/js/3.8fe5e53c.chunk.js.map",
     "index.html": "/portfolio-react/index.html",
-    "static/css/main.e15b6db3.chunk.css.map": "/portfolio-react/static/css/main.e15b6db3.chunk.css.map",
+    "static/css/main.844f6188.chunk.css.map": "/portfolio-react/static/css/main.844f6188.chunk.css.map",
     "static/js/2.70965e9e.chunk.js.LICENSE.txt": "/portfolio-react/static/js/2.70965e9e.chunk.js.LICENSE.txt",
     "static/media/grove-resize.702e1523.png": "/portfolio-react/static/media/grove-resize.702e1523.png",
     "static/media/jeff-mullen-resume.30275638.pdf": "/portfolio-react/static/media/jeff-mullen-resume.30275638.pdf",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.9be649ef.js",
     "static/js/2.70965e9e.chunk.js",
-    "static/css/main.e15b6db3.chunk.css",
+    "static/css/main.844f6188.chunk.css",
     "static/js/main.f0b1af83.chunk.js"
   ]
 }
