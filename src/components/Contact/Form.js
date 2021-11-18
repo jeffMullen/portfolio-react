@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
+import { useForm } from '@formcarry/react';
 
-function Form({ handleSubmit }) {
+function Form() {
 
     const [nameValue, setNameValue] = useState('');
     const [emailValue, setEmailValue] = useState('');
     const [messageValue, setMessageValue] = useState('');
 
+    const { state, submit } = useForm({
+        id: 'rjc7BUfIxdg'
+    });
+
+    if (state.submitted) {
+        return <div className="thank-you text-center">Thank you for your message. </div>;
+    }
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        console.log(name, value)
 
         if (name === 'name') {
             setNameValue(value);
@@ -32,41 +40,37 @@ function Form({ handleSubmit }) {
     }
 
     return (
-        <form className="contactForm">
+        <form onSubmit={submit} className="contactForm">
             <div className="mb-3 d-flex flex-column">
-                <label htmlFor="contactName" className="form-label"><span>Name</span></label>
+                <label htmlFor="name" className="form-label"><span>Name</span></label>
                 <input value={nameValue} name="name"
                     onChange={handleInputChange}
                     onBlur={(e) => handleBlur(e)}
-                    type="email"
+                    type="text"
                     className="shadow-none"
-                    id="contactName" aria-describedby="name"></input>
+                    id="name" aria-describedby="name"></input>
             </div>
             <div className="mb-3 d-flex flex-column">
-                <label htmlFor="contactEmail" className="form-label"><span>Email address</span></label>
+                <label htmlFor="email" className="form-label"><span>Email address</span></label>
                 <input value={emailValue} name="email"
                     onChange={handleInputChange}
                     onBlur={(e) => handleBlur(e)}
                     type="email"
                     className="shadow-none"
-                    id="contactEmail" aria-describedby="email"></input>
+                    id="email" aria-describedby="email"></input>
             </div>
             <div className="mb-3 d-flex flex-column">
-                <label htmlFor="contactMessage" className="form-label">Message</label>
+                <label htmlFor="message" className="form-label">Message</label>
                 <textarea value={messageValue} name="message"
                     onChange={handleInputChange}
                     onBlur={(e) => handleBlur(e)}
-                    className="shadow-none" id="contactMessage"></textarea>
+                    className="shadow-none" id="message"></textarea>
             </div>
+            {/* Gotcha spam prevention */}
+            <input type="hidden" name="_gotcha"></input>
             <button onClick={(e) => {
-                e.preventDefault();
-                if (nameValue !== '' && emailValue !== '' && messageValue !== '') {
-                    handleSubmit(nameValue, emailValue, messageValue);
-                    setNameValue('');
-                    setEmailValue('');
-                    setMessageValue('');
-                    e.target.nextElementSibling.textContent = '';
-                } else {
+                if (nameValue === '' || emailValue === '' || messageValue === '') {
+                    e.preventDefault();
                     e.target.nextElementSibling.textContent = 'All fields must be filled';
                 }
             }} type="submit">Submit</button>

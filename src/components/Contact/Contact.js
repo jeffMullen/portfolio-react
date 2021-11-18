@@ -4,15 +4,6 @@ import Form from './Form';
 
 function Contact() {
 
-    const handleSubmit = (nameValue, emailValue, messageValue) => {
-
-        const message = {
-            nameValue,
-            emailValue,
-            messageValue
-        }
-        console.log(message)
-    }
 
     return (
         <section>
@@ -23,7 +14,7 @@ function Contact() {
                 <h6>(267) 603-3134</h6>
                 <h6>jeffmullendev@gmail.com</h6>
             </div>
-            <Form handleSubmit={handleSubmit} />
+            <Form />
         </section>
     )
 }
