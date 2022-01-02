@@ -2,7 +2,7 @@
   "name": "portfolio-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jeffMullen.github.io/portfolio-react",
+  "homepage": "https://jeffmullen.dev",
   "dependencies": {
     "@formcarry/react": "^1.0.3",
     "@testing-library/jest-dom": "^5.14.1",
