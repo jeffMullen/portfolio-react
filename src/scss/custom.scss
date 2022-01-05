@@ -101,27 +101,28 @@ main {
     color: $content-text-color;
 }
 
-.bio-row img {
-    width: 85%;
-}
+.bio-row {
+    .about-paragraph {
+        line-height: 1.8rem;
+    }
 
-// Gradient Borders on Bio section elements
-.bio-row .col:nth-child(3) {
-    background: linear-gradient($body-bg, $body-bg) padding-box,
-    linear-gradient(135deg, $body-bg, $body-bg, $strong-color) border-box;
-    border: 3px solid transparent;
-}
-
-.bio-row .col:nth-child(2) {
-    background: linear-gradient($body-bg, $body-bg) padding-box,
-    linear-gradient(135deg, $strong-color, $body-bg, $body-bg) border-box;
-    border: 3px solid transparent;
-}
-
-.bio-row img {
-    background: linear-gradient($body-bg, $body-bg) padding-box,
-    linear-gradient(200deg, $body-bg, $strong-color, $body-bg) border-box;
-    border: 3px solid transparent;
+    // Gradient Borders on Bio section elements
+    img {
+        width: 85%;
+        background: linear-gradient($body-bg, $body-bg) padding-box,
+        linear-gradient(200deg, $body-bg, $strong-color, $body-bg) border-box;
+        border: 3px solid transparent;
+    }
+    .col:nth-child(3) {
+        background: linear-gradient($body-bg, $body-bg) padding-box,
+        linear-gradient(135deg, $body-bg, $body-bg, $strong-color) border-box;
+        border: 3px solid transparent;
+    }
+    .col:nth-child(2) {
+        background: linear-gradient($body-bg, $body-bg) padding-box,
+        linear-gradient(135deg, $strong-color, $body-bg, $body-bg) border-box;
+        border: 3px solid transparent;
+    }
 }
 
 // Portfolio Section Stylings
