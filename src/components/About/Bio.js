@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import selfPortrait from '../../images/Jeff-Mullen-Headshot.png';
+import selfPortrait from '../../images/Jeff-Mullen-LinkedIn-narrow.jpeg';
 
 function Bio() {
     return (
