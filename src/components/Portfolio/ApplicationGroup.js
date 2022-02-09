@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import groveImg from '../../images/grove-resize.png';
-import starBooksImg from '../../images/star-books.png';
+import mullenPhotographyImg from '../../images/mullen-photography-final.png';
 import techBlogImg from '../../images/tech-blog.png';
 import workoutImg from '../../images/workout-tracker.png';
 import weatherImg from '../../images/weather-dashboard-resize.png';
@@ -23,21 +23,21 @@ function ApplicationGroup({ modalHandler, setModalShow }) {
         },
         {
             id: 2,
+            title: 'Mullen Photography',
+            deployed: 'https://jeffmullen.github.io/mullen-photography-client/#/',
+            github: 'https://github.com/jeffMullen/mullen-photography-client',
+            image: mullenPhotographyImg,
+            tech: 'React, JavaScript, MUI, Sass(SCSS)',
+            description: "Frontend application showcasing both my photography and web development."
+        },
+        {
+            id: 3,
             title: 'Grove',
             deployed: 'http://obscure-ocean-20287.herokuapp.com/',
             github: 'https://github.com/lapshaffer/SustainableReviewsProject',
             image: groveImg,
             tech: 'Handlebars, Chart.js, Bootstrap, Node, Express, JavaScript, CSS, express-session, jQuery, MySQL, Sequelize, dotenv, bycrypt',
             description: "A consumer lead review website to convey first-hand experience of a company's sustainability practices"
-        },
-        {
-            id: 3,
-            title: 'Star Books',
-            deployed: 'https://az84.github.io/Star-Books/',
-            github: 'https://github.com/az84/Project-1',
-            image: starBooksImg,
-            tech: 'JavaScript, jQuery, Zurb CSS Framework, Google Books API, New York Times API, CSS, HTML',
-            description: 'Search for a topic and see book results'
         },
         {
             id: 4,
