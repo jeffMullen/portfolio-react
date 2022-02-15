@@ -196,7 +196,7 @@ main {
     }
     .modal-body {
         a {
-            display: block;
+            display: inline-block;
             color: $strong-color;
             font-family: $content-font;
             text-decoration: none;
